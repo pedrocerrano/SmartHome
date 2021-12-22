@@ -8,15 +8,25 @@
 import UIKit
 
 class DevicesTableViewController: UITableViewController {
+    
+    var fileName: String?
+    var deviceController: DeviceController!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.deviceController = DeviceController(fileName: fileName ?? "defaultRoom.json")
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDevicesOn), name: TurnAllOnNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDevicesOff), name: TurnAllOffNotificationName, object: nil)
+    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DeviceController.shared.devices.count
+        return deviceController.devices.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as? DeviceTableViewCell else { return UITableViewCell() }
-        let device = DeviceController.shared.devices[indexPath.row]
+        let device = deviceController.devices[indexPath.row]
         cell.updateViews(device: device)
         cell.delegate = self
         return cell
@@ -33,11 +43,21 @@ class DevicesTableViewController: UITableViewController {
         let confirmAction = UIAlertAction(title: "Create", style: .default) { _ in
             guard let contentTextField = alertController.textFields?.first,
                     let name = contentTextField.text  else { return }
-            DeviceController.shared.createDevice(name: name)
+            self.deviceController.createDevice(name: name)
             self.tableView.reloadData()
         }
         alertController.addAction(confirmAction)
         present(alertController, animated: true)
+    }
+    
+    @objc func turnAllDevicesOn() {
+        deviceController.toggleAllDevices(on: true)
+        tableView.reloadData()
+    }
+    
+    @objc func turnAllDevicesOff() {
+        deviceController.toggleAllDevices(on: false)
+        tableView.reloadData()
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
@@ -50,8 +70,8 @@ extension DevicesTableViewController: DeviceTableViewCellDelegate {
     
     func isOnSwitchToggled(_ cell: DeviceTableViewCell) {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
-        let device = DeviceController.shared.devices[indexPath.row]
-        DeviceController.shared.toggleIsOn(device: device)
+        let device = deviceController.devices[indexPath.row]
+        deviceController.toggleIsOn(device: device)
         cell.updateViews(device: device)
     }
 }

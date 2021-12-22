@@ -10,10 +10,10 @@ import Foundation
 /// A simple model controller to control the creation, reading and persistence of `Device` instances
 class DeviceController {
     
-    /// A shared instance of the device controller
-    static let shared = DeviceController()
+    private let fileName: String
     
-    init() {
+    init(fileName: String) {
+        self.fileName = fileName
         loadDevices()
     }
     
@@ -23,7 +23,7 @@ class DeviceController {
     /// The URL that Devices are persist to on disk
     private var devicesURL: URL? {
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        let url = documentsDirectory.appendingPathComponent("devices.json")
+        let url = documentsDirectory.appendingPathComponent(fileName)
         return url
     }
     
@@ -37,7 +37,12 @@ class DeviceController {
     
     func toggleIsOn(device: Device) {
         device.isOn.toggle()
-        DeviceController.shared.saveDevices()
+        saveDevices()
+    }
+    
+    func toggleAllDevices(on: Bool) {
+        devices.forEach { $0.isOn = on }
+        saveDevices()
     }
     
     /// Persists the device controllers array of Devices to disk
