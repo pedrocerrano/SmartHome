@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		F78B15F127729ACE0021C4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B15F027729ACE0021C4E0 /* AppDelegate.swift */; };
 		F78B15F327729ACE0021C4E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */; };
-		F78B15F527729ACE0021C4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B15F427729ACE0021C4E0 /* ViewController.swift */; };
 		F78B15F827729ACE0021C4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78B15F627729ACE0021C4E0 /* Main.storyboard */; };
 		F78B15FA27729AD20021C4E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78B15F927729AD20021C4E0 /* Assets.xcassets */; };
 		F78B15FD27729AD20021C4E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78B15FB27729AD20021C4E0 /* LaunchScreen.storyboard */; };
+		F78B160527729BA70021C4E0 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B160427729BA70021C4E0 /* MessagesTableViewController.swift */; };
+		F78B160727729BF90021C4E0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B160627729BF90021C4E0 /* Message.swift */; };
+		F78B160B27729D550021C4E0 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B160A27729D550021C4E0 /* MessageController.swift */; };
+		F78B16112772A8ED0021C4E0 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B16102772A8ED0021C4E0 /* MessageTableViewCell.swift */; };
+		F78B16142772A9FF0021C4E0 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B16132772A9FF0021C4E0 /* DateFormatterExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F78B15ED27729ACE0021C4E0 /* Messages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78B15F027729ACE0021C4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F78B15F427729ACE0021C4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F78B15F727729ACE0021C4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F78B15F927729AD20021C4E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F78B15FC27729AD20021C4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F78B15FE27729AD20021C4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F78B160427729BA70021C4E0 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
+		F78B160627729BF90021C4E0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F78B160A27729D550021C4E0 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		F78B16102772A8ED0021C4E0 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		F78B16132772A9FF0021C4E0 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		F78B15EF27729ACE0021C4E0 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				F78B160D2772A2030021C4E0 /* Resources */,
+				F78B160827729CF60021C4E0 /* Models */,
+				F78B160927729D380021C4E0 /* ViewControllers */,
+				F78B160C2772A1F30021C4E0 /* ModelController */,
+				F78B16122772A8F20021C4E0 /* Views */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		F78B160827729CF60021C4E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F78B160627729BF90021C4E0 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F78B160927729D380021C4E0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F78B160427729BA70021C4E0 /* MessagesTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F78B160C2772A1F30021C4E0 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				F78B160A27729D550021C4E0 /* MessageController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		F78B160D2772A2030021C4E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				F78B15F027729ACE0021C4E0 /* AppDelegate.swift */,
 				F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */,
-				F78B15F427729ACE0021C4E0 /* ViewController.swift */,
 				F78B15F627729ACE0021C4E0 /* Main.storyboard */,
 				F78B15F927729AD20021C4E0 /* Assets.xcassets */,
 				F78B15FB27729AD20021C4E0 /* LaunchScreen.storyboard */,
 				F78B15FE27729AD20021C4E0 /* Info.plist */,
+				F78B16132772A9FF0021C4E0 /* DateFormatterExtension.swift */,
 			);
-			path = Messages;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F78B16122772A8F20021C4E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F78B16102772A8ED0021C4E0 /* MessageTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F78B15F527729ACE0021C4E0 /* ViewController.swift in Sources */,
+				F78B160527729BA70021C4E0 /* MessagesTableViewController.swift in Sources */,
+				F78B160727729BF90021C4E0 /* Message.swift in Sources */,
+				F78B16142772A9FF0021C4E0 /* DateFormatterExtension.swift in Sources */,
+				F78B160B27729D550021C4E0 /* MessageController.swift in Sources */,
 				F78B15F127729ACE0021C4E0 /* AppDelegate.swift in Sources */,
 				F78B15F327729ACE0021C4E0 /* SceneDelegate.swift in Sources */,
+				F78B16112772A8ED0021C4E0 /* MessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77U2457882;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Messages/Info.plist;
+				INFOPLIST_FILE = Messages/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77U2457882;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Messages/Info.plist;
+				INFOPLIST_FILE = Messages/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
