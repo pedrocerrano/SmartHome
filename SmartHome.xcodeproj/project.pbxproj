@@ -12,26 +12,24 @@
 		F78B15F827729ACE0021C4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78B15F627729ACE0021C4E0 /* Main.storyboard */; };
 		F78B15FA27729AD20021C4E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78B15F927729AD20021C4E0 /* Assets.xcassets */; };
 		F78B15FD27729AD20021C4E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78B15FB27729AD20021C4E0 /* LaunchScreen.storyboard */; };
-		F78B160527729BA70021C4E0 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B160427729BA70021C4E0 /* MessagesTableViewController.swift */; };
-		F78B160727729BF90021C4E0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B160627729BF90021C4E0 /* Message.swift */; };
-		F78B160B27729D550021C4E0 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B160A27729D550021C4E0 /* MessageController.swift */; };
-		F78B16112772A8ED0021C4E0 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B16102772A8ED0021C4E0 /* MessageTableViewCell.swift */; };
-		F78B16142772A9FF0021C4E0 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B16132772A9FF0021C4E0 /* DateFormatterExtension.swift */; };
+		F78B160527729BA70021C4E0 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B160427729BA70021C4E0 /* DevicesTableViewController.swift */; };
+		F78B160727729BF90021C4E0 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B160627729BF90021C4E0 /* Device.swift */; };
+		F78B160B27729D550021C4E0 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B160A27729D550021C4E0 /* DeviceController.swift */; };
+		F78B16112772A8ED0021C4E0 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B16102772A8ED0021C4E0 /* DeviceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F78B15ED27729ACE0021C4E0 /* Messages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messages.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F78B15ED27729ACE0021C4E0 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78B15F027729ACE0021C4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F78B15F727729ACE0021C4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F78B15F927729AD20021C4E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F78B15FC27729AD20021C4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F78B15FE27729AD20021C4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F78B160427729BA70021C4E0 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
-		F78B160627729BF90021C4E0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		F78B160A27729D550021C4E0 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
-		F78B16102772A8ED0021C4E0 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
-		F78B16132772A9FF0021C4E0 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		F78B160427729BA70021C4E0 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
+		F78B160627729BF90021C4E0 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		F78B160A27729D550021C4E0 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
+		F78B16102772A8ED0021C4E0 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +46,7 @@
 		F78B15E427729ACE0021C4E0 = {
 			isa = PBXGroup;
 			children = (
-				F78B15EF27729ACE0021C4E0 /* Messages */,
+				F78B15EF27729ACE0021C4E0 /* SmartHome */,
 				F78B15EE27729ACE0021C4E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +54,12 @@
 		F78B15EE27729ACE0021C4E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F78B15ED27729ACE0021C4E0 /* Messages.app */,
+				F78B15ED27729ACE0021C4E0 /* SmartHome.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F78B15EF27729ACE0021C4E0 /* Messages */ = {
+		F78B15EF27729ACE0021C4E0 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
 				F78B160D2772A2030021C4E0 /* Resources */,
@@ -70,13 +68,13 @@
 				F78B160C2772A1F30021C4E0 /* ModelController */,
 				F78B16122772A8F20021C4E0 /* Views */,
 			);
-			path = Messages;
+			path = SmartHome;
 			sourceTree = "<group>";
 		};
 		F78B160827729CF60021C4E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F78B160627729BF90021C4E0 /* Message.swift */,
+				F78B160627729BF90021C4E0 /* Device.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,7 +82,7 @@
 		F78B160927729D380021C4E0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F78B160427729BA70021C4E0 /* MessagesTableViewController.swift */,
+				F78B160427729BA70021C4E0 /* DevicesTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -92,7 +90,7 @@
 		F78B160C2772A1F30021C4E0 /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
-				F78B160A27729D550021C4E0 /* MessageController.swift */,
+				F78B160A27729D550021C4E0 /* DeviceController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -106,7 +104,6 @@
 				F78B15F927729AD20021C4E0 /* Assets.xcassets */,
 				F78B15FB27729AD20021C4E0 /* LaunchScreen.storyboard */,
 				F78B15FE27729AD20021C4E0 /* Info.plist */,
-				F78B16132772A9FF0021C4E0 /* DateFormatterExtension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -114,7 +111,7 @@
 		F78B16122772A8F20021C4E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F78B16102772A8ED0021C4E0 /* MessageTableViewCell.swift */,
+				F78B16102772A8ED0021C4E0 /* DeviceTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,9 +119,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F78B15EC27729ACE0021C4E0 /* Messages */ = {
+		F78B15EC27729ACE0021C4E0 /* SmartHome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F78B160127729AD20021C4E0 /* Build configuration list for PBXNativeTarget "Messages" */;
+			buildConfigurationList = F78B160127729AD20021C4E0 /* Build configuration list for PBXNativeTarget "SmartHome" */;
 			buildPhases = (
 				F78B15E927729ACE0021C4E0 /* Sources */,
 				F78B15EA27729ACE0021C4E0 /* Frameworks */,
@@ -134,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = Messages;
+			name = SmartHome;
 			productName = Messages;
-			productReference = F78B15ED27729ACE0021C4E0 /* Messages.app */;
+			productReference = F78B15ED27729ACE0021C4E0 /* SmartHome.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F78B15E827729ACE0021C4E0 /* Build configuration list for PBXProject "Messages" */;
+			buildConfigurationList = F78B15E827729ACE0021C4E0 /* Build configuration list for PBXProject "SmartHome" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -167,7 +164,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F78B15EC27729ACE0021C4E0 /* Messages */,
+				F78B15EC27729ACE0021C4E0 /* SmartHome */,
 			);
 		};
 /* End PBXProject section */
@@ -190,13 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F78B160527729BA70021C4E0 /* MessagesTableViewController.swift in Sources */,
-				F78B160727729BF90021C4E0 /* Message.swift in Sources */,
-				F78B16142772A9FF0021C4E0 /* DateFormatterExtension.swift in Sources */,
-				F78B160B27729D550021C4E0 /* MessageController.swift in Sources */,
+				F78B160527729BA70021C4E0 /* DevicesTableViewController.swift in Sources */,
+				F78B160727729BF90021C4E0 /* Device.swift in Sources */,
+				F78B160B27729D550021C4E0 /* DeviceController.swift in Sources */,
 				F78B15F127729ACE0021C4E0 /* AppDelegate.swift in Sources */,
 				F78B15F327729ACE0021C4E0 /* SceneDelegate.swift in Sources */,
-				F78B16112772A8ED0021C4E0 /* MessageTableViewCell.swift in Sources */,
+				F78B16112772A8ED0021C4E0 /* DeviceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +343,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77U2457882;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Messages/Resources/Info.plist;
+				INFOPLIST_FILE = SmartHome/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartHome;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,7 +355,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.trevoradcock.Messages;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevoradcock.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -375,7 +372,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77U2457882;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Messages/Resources/Info.plist;
+				INFOPLIST_FILE = SmartHome/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartHome;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -386,7 +384,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.trevoradcock.Messages;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevoradcock.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -397,7 +395,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F78B15E827729ACE0021C4E0 /* Build configuration list for PBXProject "Messages" */ = {
+		F78B15E827729ACE0021C4E0 /* Build configuration list for PBXProject "SmartHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F78B15FF27729AD20021C4E0 /* Debug */,
@@ -406,7 +404,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F78B160127729AD20021C4E0 /* Build configuration list for PBXNativeTarget "Messages" */ = {
+		F78B160127729AD20021C4E0 /* Build configuration list for PBXNativeTarget "SmartHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F78B160227729AD20021C4E0 /* Debug */,

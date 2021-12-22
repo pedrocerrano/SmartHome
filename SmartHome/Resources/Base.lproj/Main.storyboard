@@ -7,51 +7,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Messages-->
+        <!--Smart Home-->
         <scene sceneID="tWY-br-1Sr">
             <objects>
-                <tableViewController id="cnk-am-6zm" customClass="MessagesTableViewController" customModule="Messages" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="cnk-am-6zm" customClass="DevicesTableViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xxP-Rx-09Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="112" id="Rtd-vj-WqH" customClass="MessageTableViewCell" customModule="Messages" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="112" id="Rtd-vj-WqH" customClass="DeviceTableViewCell" customModule="SmartHome" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rtd-vj-WqH" id="wzg-PZ-Ffg">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-nV-Sbf">
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-nV-Sbf">
                                             <rect key="frame" x="28" y="19" width="358" height="74"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XhE-Lv-KWK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="74"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" text="Message Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMr-I6-nc8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="48"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewM-Vb-nz4">
-                                                            <rect key="frame" x="0.0" y="56" width="330" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXn-fj-Edr">
-                                                    <rect key="frame" x="338" y="0.0" width="20" height="74"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="checkmark.circle" catalog="system"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" text="Device Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMr-I6-nc8">
+                                                    <rect key="frame" x="0.0" y="27" width="301" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Sg-SF-dQT">
+                                                    <rect key="frame" x="309" y="21.5" width="51" height="31"/>
                                                     <connections>
-                                                        <action selector="readButtonTapped:" destination="Rtd-vj-WqH" eventType="touchUpInside" id="mtn-MJ-Kgm"/>
+                                                        <action selector="deviceIsOnSwitchValueChanged:" destination="Rtd-vj-WqH" eventType="valueChanged" id="cuR-LL-ACO"/>
                                                     </connections>
-                                                </button>
+                                                </switch>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -63,9 +49,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dateLabel" destination="ewM-Vb-nz4" id="WMq-4U-WBe"/>
-                                    <outlet property="markAsReadButton" destination="mXn-fj-Edr" id="7af-EQ-eKe"/>
-                                    <outlet property="messageLabel" destination="TMr-I6-nc8" id="c4S-ig-Xj1"/>
+                                    <outlet property="deviceIsOnSwitch" destination="8Sg-SF-dQT" id="Ise-th-LAb"/>
+                                    <outlet property="deviceNameLabel" destination="TMr-I6-nc8" id="c4S-ig-Xj1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -74,7 +59,7 @@
                             <outlet property="delegate" destination="cnk-am-6zm" id="80u-wn-ycH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Messages" id="pNB-su-pPd">
+                    <navigationItem key="navigationItem" title="Smart Home" id="pNB-su-pPd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="krC-5a-7S7">
                             <connections>
                                 <action selector="addButtonTapped:" destination="cnk-am-6zm" id="N6Q-Fx-nPo"/>
@@ -106,10 +91,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

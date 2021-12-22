@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Messages
+//  Devices
 //
 //  Created by Trevor Adcock on 12/21/21.
 //
