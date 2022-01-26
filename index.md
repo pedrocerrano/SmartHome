@@ -23,7 +23,7 @@ Our Smart Home app will display `Device` objects in a `UITableView`. Once you cr
 
  It's gonna be great! Let's get started…
 Initial screen:
-[image:AD01D10E-9E62-42B7-96C0-0E715753BCB9-4566-000009581E39F456/SmartHomeInitial.png]
+![Inital Screen](/SmartHomeInitial.png)
 
 We feel confident that you will be able to create this design on your own. A Few notes:
 
