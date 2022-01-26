@@ -252,9 +252,9 @@ Call the `UIAlertContoller` helper function in the `IBAction` of the `addButton`
 
 We have just a few more items before this file is complete... but for now, we should…. 
 
-• A - Always
-• B - Be
-• C - Committing
+* A - Always
+* B - Be
+* C - Committing
 
 Build. Run. Commit. Party
 
