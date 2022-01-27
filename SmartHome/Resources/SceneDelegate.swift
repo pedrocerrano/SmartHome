@@ -33,7 +33,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         guard let devicesTableViewController = storyboard.instantiateViewController(withIdentifier: "RoomTableViewController") as? DevicesTableViewController else { return UINavigationController() }
         devicesTableViewController.title = name
-        devicesTableViewController.fileName = name.trimmingCharacters(in: .whitespacesAndNewlines)
         let navController = UINavigationController(rootViewController: devicesTableViewController)
         navController.tabBarItem = UITabBarItem(title: name, image: UIImage(systemName: "house"), tag: tag)
         return navController

@@ -9,14 +9,11 @@ import UIKit
 
 class DevicesTableViewController: UITableViewController {
     
-    var fileName: String?
     var deviceController: DeviceController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.deviceController = DeviceController(fileName: fileName ?? "defaultRoom.json")
-        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDevicesOn), name: TurnAllOnNotificationName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDevicesOff), name: TurnAllOffNotificationName, object: nil)
+        self.deviceController = DeviceController()
     }
 
     // MARK: - Table view data source
@@ -48,16 +45,6 @@ class DevicesTableViewController: UITableViewController {
         }
         alertController.addAction(confirmAction)
         present(alertController, animated: true)
-    }
-    
-    @objc func turnAllDevicesOn() {
-        deviceController.toggleAllDevices(on: true)
-        tableView.reloadData()
-    }
-    
-    @objc func turnAllDevicesOff() {
-        deviceController.toggleAllDevices(on: false)
-        tableView.reloadData()
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {

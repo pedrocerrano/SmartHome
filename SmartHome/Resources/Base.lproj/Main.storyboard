@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NkR-Ww-fxz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NkR-Ww-fxz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="542" y="-135"/>
         </scene>
-        <!--Toggle All View Controller-->
+        <!--View Controller-->
         <scene sceneID="vn5-MS-cFW">
             <objects>
-                <viewController storyboardIdentifier="ToggleAllViewController" id="Aru-hk-Ch4" customClass="ToggleAllViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ToggleAllViewController" id="Aru-hk-Ch4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBb-YV-MVh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,17 +87,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="97.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Turn All On"/>
-                                        <connections>
-                                            <action selector="turnAllOnButtonTapped:" destination="Aru-hk-Ch4" eventType="touchUpInside" id="HJN-We-gfS"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4k-86-FOr">
                                         <rect key="frame" x="0.0" y="47" width="97.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Turn All Off"/>
-                                        <connections>
-                                            <action selector="turnAllOffButtonTapped:" destination="Aru-hk-Ch4" eventType="touchUpInside" id="o1J-Xk-ibw"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -112,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgQ-SC-J30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="582"/>
+            <point key="canvasLocation" x="541" y="615"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IJT-cl-eZr">
