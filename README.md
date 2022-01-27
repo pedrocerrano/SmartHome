@@ -32,7 +32,9 @@ This is creating a global Notification name that will allow us to create notific
 This is creating a notification that will post to the rest of the app when ever it is called, any `Observers` listening to the same name will then run the code in their `Selectors`.
 
 * Create a second notification so we can turn all of our smart home devices off. In the `turnOffAllButtonTapped` action create a `Notification` just like the one above, but this time use the `TurnAllOffNotificationName` instead.
+
 ---
+
 # DevicesTableViewController
 The first thing we need to do on our `DevicesTableViewController` is add some `Observers` to listen for the `TurnAllOnNotificationName` notification and the `TurnAllOffNotificationName`
 
@@ -55,7 +57,9 @@ This error is saying that our `turnAllDevicesOn` function is not exposed to obje
 Repeat these steps but for `TurnAllOffNotificationName` this time.
 
 Run the app and press `Turn All On` on the `All` tab. You should see a message in your Log saying `Turning All Devices On`, and when you press `Turn All Off` you should see a message saying `Turning All Devices Off`. If you don’t something isn’t working… debug that I guess.
+
 ---
+
 # DeviceController
 Lets create a helper function to either Enable of Disable all of our smart home devices
 
