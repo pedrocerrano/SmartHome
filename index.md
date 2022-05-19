@@ -368,3 +368,117 @@ Boom! That's it! You nailed it. The protocol and its delegate are all set up. Gr
 # Build. Run. Commit. Take a break.
 
 Submit your completed project to LearnUpon with your GitHub link.
+
+
+# **Smart Home: Part 2**
+
+In this project you will be starting from a completed version of part one of the smart home app. If you do not have a completed `Part 1` version please switch to the branch `Day2-Starter`
+
+```bash
+  git switch Day2-Starter
+```
+
+If you are using the `Part2-Starter` project then we have provided you with the UI for this part of the project. All you have to do is hook up the `Notifications` that will allow the user to toggle on or off all of their smart devices. 
+
+If you are working from your completed day 1 branch please begin at the `ToggleAllViewController` section.
+
+Students who complete this project independently or as a pairing will showcase their understanding of the following principles:
+
+- IBActions
+- Global Properties
+- Notifications
+- Observers
+- Selectors
+
+---
+
+## **ToggleAllViewController**
+
+For those that need to build the UI please
+
+- Create a new `UIViewController` called `ToggleAllViewController`.
+- Hook it up to the view that looks like this.
+
+![https://github.com/Stateful-Academy/SmartHome/raw/Day2-Starter/toggleVCScreenShot.png](https://github.com/Stateful-Academy/SmartHome/raw/Day2-Starter/toggleVCScreenShot.png)
+
+### Okay, now that the UI is built
+
+1. Please create a `ToggleAllDevicesViewController` and subclass the proper `View Controller`
+2. Create two `IBActions` 
+    1. One from the top button called `turnAllOnButtonTapped`
+    2. One from the bottom button called `turnAllOffButtonTapped`.
+
+Next I want you to create something called a `Global Property`. A `Global Property` is a property declared outside of any `class` that allows global access to it.
+
+1. Create a Constant Global Property called `TurnOnAllNotificationName`
+2. Assign `TurnOnAllNotificationName` a value of `Notification.Name(rawValue: “TurnOnAllDevicesNotification”)`
+
+This is creating a global Notification name that will allow us to create notifications and observers without having to worry about typos.
+
+1. Create another Global Constant called `TurnAllOffNotificationName`
+2. Assign `TurnAllOffNotificationName` a value of `Notification.Name(rawValue: “TurnOffAllDevicesNotification”)`
+
+Inside the `turnAllOnButtonTapped` action create a Notification using the `TurnAllOnNotificationName` .
+
+1. To do so we will type `NotificationCenter.default.post(name: TurnAllOnNotificationName, object: nil)`
+2. This is creating a notification that will post to the rest of the app when ever it is called, any `Observers` listening to the same name will then run the code in their `Selectors`.
+
+Following the same steps above, create a second notification so we can turn all of our smart home devices off.
+
+1. In the `turnOffAllButtonTapped` action create a `Notification` just like the one above, but this time use the `TurnAllOffNotificationName` instead.
+
+Great work! Make a commit this work to Github
+
+---
+
+# **DevicesTableViewController**
+
+The first thing we need to do on our `DevicesTableViewController` is add some `Observers` to listen for the `TurnAllOnNotificationName` notification and the `TurnAllOffNotificationName`
+
+1. Create an observer that listens for `TurnAllOnNotificationName` in our `ViewDidLoad`
+
+### Spoiler: How do I write this?
+
+```swift
+NotificationCenter.default.addObserver(self, selector: "leave this blank for now", name: TurnAllOnNotificationName, object: nil)
+```
+
+You might notice that we left the `selector` blank. This is because we haven’t built out the function that it’s going to call yet.
+
+1. On `DevicesTableViewController` create a function called `turnAllDevicesOn` that takes in no parameters,
+    1. print `Turning All Devices On` inside `turnAllDevicesOn`s implementation
+2. pass `turnAllDevicesIOn` into the selector of the Notification in our `viewDidLoad`. To do this you type `#selector(turnAllDevicesOn)`
+
+Your going to get an error that looks like this:
+
+![Screen Shot 2022-05-18 at 4.34.57 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3985bd99-2c27-461a-a374-0dadcecab93f/Screen_Shot_2022-05-18_at_4.34.57_PM.png)
+
+This error is saying that our `turnAllDevicesOn`function is not exposed to objective-C *apples original iOS language*. To solve this all we need to do is:
+
+1. Add `@objc` the the front of `turnAllDevicesOn` so it looks like this `@objc func turnAllDevicesOn()` to expose it to Objective-C
+2. Repeat these steps but for `TurnAllOffNotificationName` this time.
+
+Run the app and press `Turn All On` on the `All` tab. You should see a message in your Log saying `Turning All Devices On`, and when you press `Turn All Off` you should see a message saying `Turning All Devices Off`. 
+
+> “If it’s not working… debug it”
+-Karl, Stateful 2022
+> 
+
+---
+
+# **DeviceController**
+
+Lets create a helper function to either Enable of Disable all of our smart home devices
+
+1. Open the `DeviceController.swift` file
+2. Create a new function called `toggleAllDevicesOn` that takes in a `boolean` called `on`
+3. Inside the function loop through the `devices` property and set all of the `isOn` properties equal too `on`.
+4. Open `DevicesTableViewController`
+5. Inside the `turnAllDevicesOn` and `turnAllDevicesOff` functions call `deviceController.toggleAllDevices(on: true)` and `deviceController.toggleAllDevices(on: false)`respectively.
+
+> Run your app and make sure that your `Turn All On` and `Turn All Off` buttons enable and disable all of the devices in your Smart Home
+> 
+
+# Build. Run. Commit. Take a break.
+
+Submit your completed project to LearnUpon with your GitHub link.
