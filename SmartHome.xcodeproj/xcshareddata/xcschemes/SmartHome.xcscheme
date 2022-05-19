@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F78B15EC27729ACE0021C4E0"
-               BuildableName = "Messages.app"
+               BuildableName = "SmartHome.app"
                BlueprintName = "SmartHome"
                ReferencedContainer = "container:SmartHome.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F78B15EC27729ACE0021C4E0"
-            BuildableName = "Messages.app"
+            BuildableName = "SmartHome.app"
             BlueprintName = "SmartHome"
             ReferencedContainer = "container:SmartHome.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F78B15EC27729ACE0021C4E0"
-            BuildableName = "Messages.app"
+            BuildableName = "SmartHome.app"
             BlueprintName = "SmartHome"
             ReferencedContainer = "container:SmartHome.xcodeproj">
          </BuildableReference>
