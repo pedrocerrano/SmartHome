@@ -15,7 +15,7 @@ class DeviceController {
     
     
     init() {
-        loadDevices()
+        loadDevicesFromDisk()
     } //: INITIALIZER
     
     
@@ -23,7 +23,7 @@ class DeviceController {
     func toggleIsOn(device: Device) {
         device.isOn.toggle()
         
-        saveDevices()
+        saveDevicesToDisk()
     } //: TOGGLE
     
     
@@ -32,26 +32,26 @@ class DeviceController {
         let newDevice = Device(name: newName)
         devices.append(newDevice)
         
-        saveDevices()
+        saveDevicesToDisk()
     } //: CREATE
     
     
     func deleteDevice(deviceToDelete: Device) {
         
-        saveDevices()
+        saveDevicesToDisk()
     } //: DELETE
     
     
     //MARK: - PERSISTENCE
-    private var url: URL? {
+    private var devicesURL: URL? {
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        let finalURL = documentsDirectory.appendingPathComponent("devices.json")
-        return finalURL
+        let url = documentsDirectory.appendingPathComponent("devices.json")
+        return url
     } //: LOCAL STORAGE LOCATION
     
     
-    func saveDevices() {
-        guard let url = url else { return }
+    func saveDevicesToDisk() {
+        guard let url = devicesURL else { return }
         do {
             let data = try JSONEncoder().encode(devices)
             try data.write(to: url)
@@ -61,12 +61,12 @@ class DeviceController {
     } //: SAVE
     
     
-    func loadDevices() {
-        guard let url = url else { return }
+    func loadDevicesFromDisk() {
+        guard let url = devicesURL else { return }
         do {
-            let retreivedData = try Data(contentsOf: url)
-            let decodedData   = try JSONDecoder().decode([Device].self, from: retreivedData)
-            self.devices      = decodedData
+            let retreivedData   = try Data(contentsOf: url)
+            let decodedDevices  = try JSONDecoder().decode([Device].self, from: retreivedData)
+            self.devices        = decodedDevices
         } catch {
             print("Error Loading Devices", error.localizedDescription)
         } //: DO-CATCH

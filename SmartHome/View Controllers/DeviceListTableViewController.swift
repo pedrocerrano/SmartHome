@@ -13,17 +13,26 @@ class DeviceListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     } //: DidLOAD
+    
+    
+    //MARK: - ACTIONS
+    @IBAction func addDeviceButtonTapped(_ sender: Any) {
+        presentNewDeviceAlertController()
+    } //: ADD TAPPED
 
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return DeviceController.sharedIntstance.devices.count
     } //: # ROWS
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "smartHomeCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "smartHomeCell", for: indexPath) as? DeviceTableViewCell else { return UITableViewCell() }
 
+        let deviceIndex = DeviceController.sharedIntstance.devices[indexPath.row]
+        
 
         return cell
     } //: CELL CONFIG
@@ -36,4 +45,27 @@ class DeviceListTableViewController: UITableViewController {
         } //: DELETE
     } //: EDITING STYLE
 
+    
+    //MARK: - FUNCTIONS
+    private func presentNewDeviceAlertController() {
+        let alertController = UIAlertController(title: "New Device", message: "Enter the name of your device below", preferredStyle: .alert)
+        
+        alertController.addTextField { alertTextField in
+            alertTextField.placeholder = "New Device Name..."
+        } //: PLACEHOLDER
+        
+        let dismissAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(dismissAction)
+        
+        let confirmAction = UIAlertAction(title: "Create", style: .default) { _ in
+            guard let contentTextField = alertController.textFields?.first,
+                  let newDevice = contentTextField.text, !newDevice.isEmpty else { return }
+            DeviceController.sharedIntstance.createDevice(newName: newDevice)
+            self.tableView.reloadData()
+        } //: TEXT CONFIG
+        alertController.addAction(confirmAction)
+        
+        present(alertController, animated: true)
+    } //: ALERT
+    
 } //: CLASS
