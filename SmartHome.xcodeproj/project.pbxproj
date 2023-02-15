@@ -10,6 +10,7 @@
 		290D34C0299D664900D825E5 /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D34BF299D664900D825E5 /* DeviceListTableViewController.swift */; };
 		290D34C3299D670E00D825E5 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D34C2299D670E00D825E5 /* DeviceTableViewCell.swift */; };
 		290D34C5299D68C100D825E5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D34C4299D68C100D825E5 /* Device.swift */; };
+		290D34C7299D697200D825E5 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D34C6299D697200D825E5 /* DeviceController.swift */; };
 		F78B15F127729ACE0021C4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B15F027729ACE0021C4E0 /* AppDelegate.swift */; };
 		F78B15F327729ACE0021C4E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */; };
 		F78B15F827729ACE0021C4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78B15F627729ACE0021C4E0 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		290D34BF299D664900D825E5 /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		290D34C2299D670E00D825E5 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		290D34C4299D68C100D825E5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		290D34C6299D697200D825E5 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
 		F78B15ED27729ACE0021C4E0 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78B15F027729ACE0021C4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		290D34BD299D64A200D825E5 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				290D34C6299D697200D825E5 /* DeviceController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				F78B15F127729ACE0021C4E0 /* AppDelegate.swift in Sources */,
 				F78B15F327729ACE0021C4E0 /* SceneDelegate.swift in Sources */,
 				290D34C0299D664900D825E5 /* DeviceListTableViewController.swift in Sources */,
+				290D34C7299D697200D825E5 /* DeviceController.swift in Sources */,
 				290D34C3299D670E00D825E5 /* DeviceTableViewCell.swift in Sources */,
 				290D34C5299D68C100D825E5 /* Device.swift in Sources */,
 			);
