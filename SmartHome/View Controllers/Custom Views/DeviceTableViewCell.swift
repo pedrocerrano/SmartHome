@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol DeviceTableViewCellDelegate: AnyObject {
+    func isOnSwitchToggled(cell: DeviceTableViewCell)
+} //: PROTOCOL
+
+
 class DeviceTableViewCell: UITableViewCell {
 
     //MARK: - OUTLETS
@@ -15,19 +20,19 @@ class DeviceTableViewCell: UITableViewCell {
     
     
     //MARK: - PROPERTIES
-    
+    weak var delegate: DeviceTableViewCellDelegate?
     
     
     //MARK: - FUNCTIONS
     func updateViews(device: Device) {
         deviceNameLabel.text  = device.name
         deviceIsOnSwitch.isOn = device.isOn
-    }
+    } //: UPDATE
     
     
     //MARK: - ACTIONS
     @IBAction func isOnSwitchToggled(_ sender: Any) {
-        
+        delegate?.isOnSwitchToggled(cell: self)
     } //: SWITCH TOGGLED
     
 } //: CLASS

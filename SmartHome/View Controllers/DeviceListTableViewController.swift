@@ -33,6 +33,7 @@ class DeviceListTableViewController: UITableViewController {
 
         let deviceIndex = DeviceController.sharedIntstance.devices[indexPath.row]
         cell.updateViews(device: deviceIndex)
+        cell.delegate = self
 
         return cell
     } //: CELL CONFIG
@@ -69,3 +70,13 @@ class DeviceListTableViewController: UITableViewController {
     } //: ALERT
     
 } //: CLASS
+
+
+extension DeviceListTableViewController: DeviceTableViewCellDelegate {
+    func isOnSwitchToggled(cell: DeviceTableViewCell) {
+        guard let cellIndex = tableView.indexPath(for: cell) else { return }
+        let device = DeviceController.sharedIntstance.devices[cellIndex.row]
+        DeviceController.sharedIntstance.toggleIsOn(device: device)
+        cell.updateViews(device: device)
+    } //: IMPLEMENTATION
+} //: EXTENSTION
