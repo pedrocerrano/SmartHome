@@ -37,6 +37,8 @@ class DeviceController {
     
     
     func deleteDevice(deviceToDelete: Device) {
+        guard let deviceIndex = devices.firstIndex(of: deviceToDelete) else { return }
+        devices.remove(at: deviceIndex)
         
         saveDevicesToDisk()
     } //: DELETE

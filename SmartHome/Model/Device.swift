@@ -20,3 +20,10 @@ class Device: Codable {
     } //: MEMBERWISE INITIALIZER
     
 } //: CLASS
+
+
+extension Device: Equatable {
+    static func == (lhs: Device, rhs: Device) -> Bool {
+        return lhs.id == rhs.id
+    }
+} //: EXTENSION

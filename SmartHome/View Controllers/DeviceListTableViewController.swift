@@ -41,7 +41,8 @@ class DeviceListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            let deleteThisDevice = DeviceController.sharedIntstance.devices[indexPath.row]
+            DeviceController.sharedIntstance.deleteDevice(deviceToDelete: deleteThisDevice)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } //: DELETE
     } //: EDITING STYLE
