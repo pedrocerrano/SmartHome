@@ -32,7 +32,7 @@ class DeviceListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "smartHomeCell", for: indexPath) as? DeviceTableViewCell else { return UITableViewCell() }
 
         let deviceIndex = DeviceController.sharedIntstance.devices[indexPath.row]
-        
+        cell.updateViews(device: deviceIndex)
 
         return cell
     } //: CELL CONFIG

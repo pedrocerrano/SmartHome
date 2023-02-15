@@ -19,8 +19,9 @@ class DeviceTableViewCell: UITableViewCell {
     
     
     //MARK: - FUNCTIONS
-    func updateViews() {
-        
+    func updateViews(device: Device) {
+        deviceNameLabel.text  = device.name
+        deviceIsOnSwitch.isOn = device.isOn
     }
     
     
