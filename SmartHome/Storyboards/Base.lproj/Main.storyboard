@@ -90,6 +90,7 @@
                                         <buttonConfiguration key="configuration" style="tinted" title="Turn All On"/>
                                         <connections>
                                             <action selector="turnAllOnButtonTapped:" destination="muN-hP-1xf" eventType="touchUpInside" id="gBp-Cj-vYq"/>
+                                            <action selector="turnAllOnButtonTapped:" destination="d0A-iY-wHP" eventType="touchUpInside" id="msK-Ij-OjA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tP-bs-6pN">
@@ -97,6 +98,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Turn All Off"/>
                                         <connections>
+                                            <action selector="turnAllOffButtonTapped:" destination="d0A-iY-wHP" eventType="touchUpInside" id="KKF-1d-gRL"/>
                                             <action selector="turnAllOffButtonTapped:" destination="muN-hP-1xf" eventType="touchUpInside" id="tiR-xJ-lil"/>
                                         </connections>
                                     </button>

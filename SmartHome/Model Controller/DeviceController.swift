@@ -27,6 +27,11 @@ class DeviceController {
     } //: TOGGLE
     
     
+    func toggleAllDevicesOn(on: Bool) {
+        devices.forEach { $0.isOn = on }
+    } //: Toggle ALL ON
+    
+    
     //MARK: - CRUD
     func createDevice(newName: String) {
         let newDevice = Device(name: newName)

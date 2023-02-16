@@ -53,12 +53,14 @@ class DeviceListTableViewController: UITableViewController {
     
     //MARK: - FUNCTIONS
     @objc func turnOnAllDevices() {
-        print("All ON")
+        DeviceController.sharedIntstance.toggleAllDevicesOn(on: true)
+        tableView.reloadData()
     } //: All ON
     
     
     @objc func turnOffAllDevices() {
-        print("Lights OFF")
+        DeviceController.sharedIntstance.toggleAllDevicesOn(on: false)
+        tableView.reloadData()
     } //: All OFF
     
     
