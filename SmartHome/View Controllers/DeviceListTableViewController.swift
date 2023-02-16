@@ -12,6 +12,9 @@ class DeviceListTableViewController: UITableViewController {
     //MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(turnOnAllDevices), name: Constants.Notifications.turnOnAllNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(turnOffAllDevices), name: Constants.Notifications.turnOffAllNotificationName, object: nil)
     } //: DidLOAD
     
     
@@ -49,6 +52,16 @@ class DeviceListTableViewController: UITableViewController {
 
     
     //MARK: - FUNCTIONS
+    @objc func turnOnAllDevices() {
+        print("All ON")
+    } //: All ON
+    
+    
+    @objc func turnOffAllDevices() {
+        print("Lights OFF")
+    } //: All OFF
+    
+    
     private func presentNewDeviceAlertController() {
         let alertController = UIAlertController(title: "New Device", message: "Enter the name of your device below", preferredStyle: .alert)
         
@@ -79,5 +92,5 @@ extension DeviceListTableViewController: DeviceTableViewCellDelegate {
         let device = DeviceController.sharedIntstance.devices[cellIndex.row]
         DeviceController.sharedIntstance.toggleIsOn(device: device)
         cell.updateViews(device: device)
-    } //: IMPLEMENTATION
-} //: EXTENSTION
+    }
+} //: EXTENSTION CellDelegate
