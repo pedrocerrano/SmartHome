@@ -11,6 +11,8 @@
 		290D34C3299D670E00D825E5 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D34C2299D670E00D825E5 /* DeviceTableViewCell.swift */; };
 		290D34C5299D68C100D825E5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D34C4299D68C100D825E5 /* Device.swift */; };
 		290D34C7299D697200D825E5 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D34C6299D697200D825E5 /* DeviceController.swift */; };
+		294FDC85299EB94C00A50D7D /* ToggleAllDevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294FDC84299EB94C00A50D7D /* ToggleAllDevicesVC.swift */; };
+		294FDC87299EBB6200A50D7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294FDC86299EBB6200A50D7D /* Constants.swift */; };
 		F78B15F127729ACE0021C4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B15F027729ACE0021C4E0 /* AppDelegate.swift */; };
 		F78B15F327729ACE0021C4E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */; };
 		F78B15F827729ACE0021C4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78B15F627729ACE0021C4E0 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		290D34C2299D670E00D825E5 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		290D34C4299D68C100D825E5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		290D34C6299D697200D825E5 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
+		294FDC84299EB94C00A50D7D /* ToggleAllDevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAllDevicesVC.swift; sourceTree = "<group>"; };
+		294FDC86299EBB6200A50D7D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F78B15ED27729ACE0021C4E0 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78B15F027729ACE0021C4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				290D34BF299D664900D825E5 /* DeviceListTableViewController.swift */,
+				294FDC84299EB94C00A50D7D /* ToggleAllDevicesVC.swift */,
 				290D34C1299D66C700D825E5 /* Custom Views */,
 			);
 			path = "View Controllers";
@@ -120,6 +125,7 @@
 				F78B15F227729ACE0021C4E0 /* SceneDelegate.swift */,
 				F78B15F927729AD20021C4E0 /* Assets.xcassets */,
 				F78B15FE27729AD20021C4E0 /* Info.plist */,
+				294FDC86299EBB6200A50D7D /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,8 +205,10 @@
 				F78B15F327729ACE0021C4E0 /* SceneDelegate.swift in Sources */,
 				290D34C0299D664900D825E5 /* DeviceListTableViewController.swift in Sources */,
 				290D34C7299D697200D825E5 /* DeviceController.swift in Sources */,
+				294FDC85299EB94C00A50D7D /* ToggleAllDevicesVC.swift in Sources */,
 				290D34C3299D670E00D825E5 /* DeviceTableViewCell.swift in Sources */,
 				290D34C5299D68C100D825E5 /* Device.swift in Sources */,
+				294FDC87299EBB6200A50D7D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
